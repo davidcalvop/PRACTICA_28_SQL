@@ -54,3 +54,27 @@ alter table usuarios disable constraint usuarios_nn5;
 alter table post add (visible char(2) default 'SI',
   constraint post_ck4 check ( visible = 'SI' or visible = 'NO')
   );
+
+--------------- 3 -------------------
+
+select * from usuarios;
+
+insert into usuarios(id_u, usuario, e_mail, nombre, apellido1, apellido2)
+VALUES (1,'ramongar','ramon@hotmail.com','ramon','garcia','ortigal');
+
+insert into usuarios(id_u, usuario, e_mail, nombre, apellido1)
+VALUES (2,'lurditas','lurdita@bbc.co.uk','lourdes','atienza');
+
+insert into usuarios(id_u, usuario, e_mail, nombre, apellido1, apellido2)
+VALUES (3,'marioso','marioso19@yahoo.com','marisol','jimenez','del oso');
+
+insert into usuarios(id_u, usuario, e_mail, nombre, apellido1, apellido2)
+VALUES (4,'sercal','sercal1980@gmail.com','francisco','serrano','calvo');
+
+--------------- 4 -------------------
+
+commit;
+
+--------------- 5 -------------------
+
+update usuarios set passw=12345;
